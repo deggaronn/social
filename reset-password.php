@@ -14,14 +14,13 @@
 
 <?php
 include('db.php');
-if (isset($_GET["key"]) && isset($_GET["email"])
+if (isset($_GET["user_email"])
 && isset($_GET["action"]) && ($_GET["action"]=="reset")
 && !isset($_POST["action"])){
-$key = $_GET["key"];
-$email = $_GET["email"];
+$email = $_GET["user_email"];
 $curDate = date("Y-m-d H:i:s");
 $query = mysqli_query($con,"
-SELECT * FROM `password_reset_temp` WHERE `key`='".$key."' and `email`='".$email."';");
+SELECT * FROM `registration` WHERE and `email`='".$email."';");
 $row = mysqli_num_rows($query);
 if ($row==""){
 $error .= '<h2>Invalid Link</h2>
