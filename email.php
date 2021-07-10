@@ -51,13 +51,13 @@ $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->Host = "mail.google.com";
 $mail->SMTPAuth = true;
-$mail->Username = "friendbookt@gmail.com"; // Enter your email here
-$mail->Password = "Friendbookteam@123"; //Enter your password here
+$mail->Username = "friendbookt@gmail.com";
+$mail->Password = "Friendbookteam@123";
 $mail->Port = 25;
 $mail->IsHTML(true);
 $mail->From = "noreply@friendbook.com";
 $mail->FromName = "Friendbook";
-$mail->Sender = $fromserver; // indicates ReturnPath header
+$mail->Sender = $fromserver;
 $mail->Subject = $subject;
 $mail->Body = $body;
 $mail->AddAddress($email_to);
