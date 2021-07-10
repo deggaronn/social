@@ -2,7 +2,7 @@
 session_start();
    if(isset($_SESSION['friendbook'])){
        echo "<script>location.href='home.php'</script>";
-   }
+   }	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +47,7 @@ session_start();
                     <i class="far fa-eye" id="togglePassword"></i>
                     <script src="js/app.js"></script>
                     <br>
-                    <input type="submit" name="login" class="" id="login" value="Login"> or <a href="#" style="color: white;"> forgot password</a>
+                    <input type="submit" name="login" class="" id="login" value="Login"> or <a href="reset-password.php" style="color: white;"> forgot password</a>
                 </form>
             </div>
         </div>
