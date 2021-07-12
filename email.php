@@ -21,7 +21,6 @@ if (!$email) {
    $password = md5(2418*2+$email);
    $addpassword = substr(md5(uniqid(rand(),1)),3,10);
    $password = $password . $addpassword;
-// Insert Temp Table
 mysqli_query($con,
 "INSERT INTO `registration` (`user_email`, `user_password`)
 VALUES ('".$email."', '".$password."');");
@@ -71,12 +70,18 @@ echo "<div class='error'>
    }
 }else{
 ?>
-<form method="post" action="" name="reset"><br /><br />
-<label><strong>Enter Your Email Address:</strong></label><br /><br />
-<input type="email" name="email" placeholder="username@email.com" />
-<br /><br />
-<input type="submit" value="Reset Password"/>
-</form>
+<link rel='stylesheet' href='css/reset.css' type='text/css' media='all' />
+<div class="form-name" style="background-image: url("/img/backgroundfp.jpg");">
+   <form method="post" action="" name="reset" ><br /><br />
+  <centre> <label><strong>Enter Your Email Address:</strong></label><br /><br />
+   <input type="email" class="email" name="email" placeholder="username@email.com" />
+   <br /><br />
+   <input type="submit" class="submit" value="Reset Password"/></centre>
+   <br/><br/>
+   or go back to <a id="login" href="index.php">Login</a>
+   </form>
+
+</div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
